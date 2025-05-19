@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Yoga Falls Prevention Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um site de uma página (landing page) que promove um programa de yoga especialmente projetado para prevenir quedas, focado principalmente em adultos mais velhos.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `src/components/`: Contém todos os componentes do React
+  - `Hero.tsx`: Seção principal com título e imagem
+  - `Introduction.tsx`: História pessoal da Margaret
+  - `DangerSection.tsx`: Estatísticas sobre os perigos das quedas
+  - `WhyPeopleFall.tsx`: Explicação sobre por que as pessoas caem
+  - `Solution.tsx`: Apresentação da solução Sturdi-Sense Yoga
+  - `Footer.tsx`: Rodapé com informações de copyright
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar o Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone este repositório
+2. Instale as dependências com `bun install`
+3. Execute o servidor de desenvolvimento com `bun run dev`
+4. Acesse `http://localhost:5173` no seu navegador
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Construir para Produção
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Execute `bun run build` para construir o projeto
+2. Os arquivos de produção estarão disponíveis no diretório `dist/`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Demonstração
+
+O site está atualmente hospedado no Netlify:
+[https://same-1k6dww6vs43-latest.netlify.app](https://same-1k6dww6vs43-latest.netlify.app)
+
+## Autor
+
+Este projeto foi criado como uma clonagem de uma landing page existente, apenas para fins de demonstração e aprendizado.
